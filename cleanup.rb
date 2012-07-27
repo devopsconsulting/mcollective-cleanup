@@ -1,7 +1,7 @@
 module MCollective
     module Agent
         class Cleanup<RPC::Agent
-            metadata :name        => "CleanUp agent",
+            metadata :name        => "Cleanup agent",
                      :description => "Perform service specific cleanup tasks before destroying a server",
                      :author      => "Lars van de Kerkhof <lars@permanentmarkers.nl>",
                      :license     => "GPLv2",
