@@ -31,4 +31,6 @@ the ``agent`` instance and a ``Hash`` containing all the server facts::
         end
     end
 
+Make sure to set the ``:status``, ``:out`` and ``:err`` keys on the ``reply`` field.
+
 After that send us a pull request and we will add the cleanup command.

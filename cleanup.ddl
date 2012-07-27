@@ -7,7 +7,16 @@ metadata :name        => "CleanUp agent",
     :timeout     => 600
 
 action "echo", :description "Echos back any message it receives" do
-   output :msg,
+   output :status,
+       :description => "The status of the cleanup action.",
+       :display_as  => "Status"
+
+   output :out,
           :description => "The result of the cleanup action.",
-          :display_as  => "Result"
+          :display_as  => "Output"
+
+   output :err,
+       :description => "Errors that happened while running the cleanup action.",
+       :display_as  => "Error"
+          
 end
