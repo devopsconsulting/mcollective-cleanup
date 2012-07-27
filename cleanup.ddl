@@ -6,7 +6,7 @@ metadata :name        => "Cleanup agent",
     :url         => "https://github.dtc.avira.com/VDT/mcollective-cleanup",
     :timeout     => 600
 
-action "cleanup", :description "Perform cleanup specific to the server role." do
+action "cleanup", :description => "Perform cleanup specific to the server role." do
    output :status,
        :description => "The status of the cleanup action.",
        :display_as  => "Status"
