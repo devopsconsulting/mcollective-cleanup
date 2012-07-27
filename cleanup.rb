@@ -1,6 +1,6 @@
 module MCollective
     module Agent
-        class CleanUp<RPC::Agent
+        class Cleanup<RPC::Agent
             metadata :name        => "CleanUp agent",
                      :description => "Perform service specific cleanup tasks before destroying a server",
                      :author      => "Lars van de Kerkhof <lars@permanentmarkers.nl>",
@@ -19,7 +19,9 @@ module MCollective
                     
                     cleanup agent, facts
                 rescue LoadError
-                    reply[:msg] =  "no cleaner found for #{role}, doing nothing."
+                    reply[:status] = 0
+                    reply[:out] =  "no cleaner found for #{role}, doing nothing."
+                    reply[:err] = ""
                 end
             end
         end
