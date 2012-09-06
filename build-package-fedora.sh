@@ -8,6 +8,6 @@ fpm -s dir -t rpm -a all  \
 	--maintainer "Frank Spijkerman <frank.spijkerman@avira.com>" \
 	--url "https://github.dtc.avira.com/VDT/mcollective-cleanup" \
 	--depends "mcollective" \
-	--prefix "/usr/libexec/mcollective/mcollective" \
+	--prefix "/usr/share/mcollective/plugins/mcollective" \
 	--exclude "README.rst" \
     *
