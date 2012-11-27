@@ -17,7 +17,7 @@ module MCollective
                     # import the correct cleaner function.
                     require "mcollective/agent/cleaners/#{role}"
                     
-                    cleanup agent, facts
+                    cleanup self, facts
                 rescue LoadError
                     reply[:status] = 0
                     reply[:out] =  "no cleaner found for #{role}, doing nothing."
