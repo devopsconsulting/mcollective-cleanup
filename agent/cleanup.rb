@@ -24,6 +24,10 @@ module MCollective
                     reply[:err] = ""
                 end
             end
+            
+            def command(*args)
+                run(*args)
+            end
         end
     end
 end
