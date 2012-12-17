@@ -5,7 +5,7 @@ def cleanup(agent, facts)
 
     # determine this server's token
     nodetool_info = ""
-    status = agent.command("nodetool info", :stdout => nodetool_info, stderr => :err)
+    status = agent.command("nodetool info", :stdout => nodetool_info, :stderr => :err)
     
     if status == 0
         token = nodetool_info.split[2]
